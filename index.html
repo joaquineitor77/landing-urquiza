@@ -33,16 +33,35 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 @keyframes pu-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
 .pu-datos > div{justify-content:center;text-align:center;transition:box-shadow .45s ease,transform .45s ease}
 .pu-datos > div:hover{box-shadow:0 10px 28px rgba(20,50,26,.18);transform:translateY(-2px)}
+.pu-burger{display:none;justify-self:end;width:46px;height:46px;border:0;background:transparent;cursor:pointer;padding:11px;border-radius:12px}
+.pu-burger span{display:block;height:3px;border-radius:3px;background:#ffffff;transition:transform .35s ease,opacity .35s ease,background-color .25s ease}
+.pu-burger span+span{margin-top:6px}
+.pu-hdr.scrolled .pu-burger span{background:#62b453}
+.pu-hdr.open .pu-burger span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.pu-hdr.open .pu-burger span:nth-child(2){opacity:0}
+.pu-hdr.open .pu-burger span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+.pu-mnav{display:none}
+@media (max-width:860px){
+.pu-hdr-in{grid-template-columns:minmax(0,1fr) auto !important}
+.pu-hdr-in > nav,.pu-hdr-in > .pu-btn{display:none !important}
+.pu-burger{display:block}
+.pu-mnav{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:#ffffff;padding:4px 24px 24px;border-bottom:1px solid #e3efe0;box-shadow:0 14px 28px rgba(0,0,0,.10);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .35s ease,transform .35s ease,visibility .35s}
+.pu-hdr.open .pu-mnav{opacity:1;visibility:visible;transform:none}
+.pu-mnav a{padding:16px 0;font-family:'elza-round-variable',Nunito,sans-serif;font-weight:700;font-size:20px;color:#62b453;text-decoration:none;border-bottom:1px solid #eef5ec}
+.pu-mnav a.pu-mbtn{margin-top:16px;border:0;background:#fbbb53;color:#000000;text-align:center;border-radius:999px;padding:15px;font-size:17px}
+}
 </style>
 </head>
 <body>
 <div style="font-family: Inter, system-ui, sans-serif; color: #3d3d3d; background: #ffffff; width: 100%; overflow-x: clip">
 
 <header id="pu-hdr" class="pu-hdr" style="position: sticky; top: 0; z-index: 50; height: 84px; box-sizing: border-box">
-<div style="max-width: 1200px; height: 100%; box-sizing: border-box; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px">
+<div class="pu-hdr-in" style="max-width: 1200px; height: 100%; box-sizing: border-box; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px">
 <a href="#inicio" aria-label="Parque Urquiza, inicio" style="display: flex; align-items: center; justify-self: start"><img id="pu-logo" src="img/logo-blanco.png" alt="Parque Urquiza" style="height: 48px; width: auto; display: block"></a>
 <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500"><a href="#stand" style="text-decoration: none">Stand</a><a href="#juego" style="text-decoration: none">Explorador Urquiza</a><a href="#llegar" style="text-decoration: none">Cómo llegar</a></nav><a class="pu-btn" href="https://www.instagram.com/suramericanos2026/" style="justify-self: end; white-space: nowrap; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 16px; padding: 12px 22px; border-radius: 999px" target="_blank" rel="noopener noreferrer">Seguinos en redes sociales</a>
+<button id="pu-burger" class="pu-burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="pu-mnav"><span></span><span></span><span></span></button>
 </div>
+<nav id="pu-mnav" class="pu-mnav" aria-label="Menú móvil"><a href="#stand">Stand</a><a href="#juego">Explorador Urquiza</a><a href="#llegar">Cómo llegar</a><a class="pu-mbtn" href="https://www.instagram.com/suramericanos2026/" target="_blank" rel="noopener noreferrer">Seguinos en redes sociales</a></nav>
 </header>
 
 <section id="inicio" style="position: relative; overflow: hidden; background: #62b453; padding: 156px 24px 88px; margin-top: -84px; height: 654px; display: flex; align-items: center; justify-content: center">
@@ -157,9 +176,24 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 (function () {
   var hdr = document.getElementById('pu-hdr');
   var logo = document.getElementById('pu-logo');
+  var burger = document.getElementById('pu-burger');
+  var mnav = document.getElementById('pu-mnav');
   var last = null;
+  var open = false;
+  function setOpen(v) {
+    open = v;
+    hdr.classList.toggle('open', v);
+    burger.setAttribute('aria-expanded', v ? 'true' : 'false');
+    burger.setAttribute('aria-label', v ? 'Cerrar menú' : 'Abrir menú');
+    last = null;
+    update();
+  }
+  burger.addEventListener('click', function () { setOpen(!open); });
+  mnav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && open) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 860 && open) setOpen(false); });
   function update() {
-    var s = (window.scrollY || document.documentElement.scrollTop) > 40;
+    var s = open || (window.scrollY || document.documentElement.scrollTop) > 40;
     if (s === last) return;
     last = s;
     hdr.classList.toggle('scrolled', s);
