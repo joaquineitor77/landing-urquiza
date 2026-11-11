@@ -11,16 +11,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Nunito:wght@700;800;900&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#ffffff}
-a{color:#14321a}a:hover{color:#2f6b28}
+a{color:#62b453}a:hover{color:#fbbb53}
+h2{color:#62b453}
 html{scroll-behavior:smooth}
 @media (max-width:1000px){.pu-datos{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
 @media (max-width:560px){.pu-datos{grid-template-columns:minmax(0,1fr) !important}}
 .pu-hdr{background:transparent;border-bottom:1px solid transparent;transition:background-color .25s ease,border-color .25s ease}
 .pu-hdr.scrolled{background:#ffffff;border-bottom-color:#e3efe0}
 .pu-hdr nav a{color:#ffffff !important}
-.pu-hdr.scrolled nav a{color:#14321a !important}
-.pu-hdr .pu-btn{--bg:#14321a;--fg:#ffffff;background:var(--bg);color:var(--fg)}
-.pu-hdr.scrolled .pu-btn{--bg:#fbbb53;--fg:#14321a}
+.pu-hdr.scrolled nav a{color:#62b453 !important}
+.pu-hdr .pu-btn{--bg:#ffffff;--fg:#62b453;background:var(--bg);color:var(--fg)}
+.pu-hdr.scrolled .pu-btn{--bg:#62b453;--fg:#ffffff}
 nav[aria-label="Principal"] > a{padding-bottom:3px;background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .4s ease}
 nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 .pu-btn{transition:background-color .4s ease,color .4s ease !important}
@@ -33,7 +34,7 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 </style>
 </head>
 <body>
-<div style="font-family: Inter, system-ui, sans-serif; color: #14321a; background: #ffffff; width: 100%; overflow-x: clip">
+<div style="font-family: Inter, system-ui, sans-serif; color: #3d3d3d; background: #ffffff; width: 100%; overflow-x: clip">
 
 <header id="pu-hdr" class="pu-hdr" style="position: sticky; top: 0; z-index: 50; height: 84px; box-sizing: border-box">
 <div style="max-width: 1200px; height: 100%; box-sizing: border-box; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px">
@@ -42,7 +43,7 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 </div>
 </header>
 
-<section id="inicio" style="position: relative; overflow: hidden; background: #14321a; padding: 156px 24px 88px; margin-top: -84px; height: 654px; display: flex; align-items: center; justify-content: center">
+<section id="inicio" style="position: relative; overflow: hidden; background: #62b453; padding: 156px 24px 88px; margin-top: -84px; height: 654px; display: flex; align-items: center; justify-content: center">
 <img src="img/hero.jpg" alt="" aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block">
 <div aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #62b453; opacity: 0.87"></div>
 <div style="position: relative; width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 56px">
@@ -50,7 +51,7 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 <h1 style="margin: 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: clamp(52px, 7vw, 96px); line-height: 0.98; letter-spacing: -0.02em; color: #ffffff; width: 100%; max-width: 854px; text-align: center">Urquiza&nbsp;también juega</h1>
 <p style="margin: 0; font-size: 20px; line-height: 1.55; max-width: 560px; color: #ffffff; text-align: center; font-weight: 500">Del 12 al 26 de septiembre, el Parque Urquiza llega al Fan Fest de los Juegos Suramericanos. Vení a jugar, ganá tu medalla de Explorador Urquiza y llevate el parque en el bolsillo.</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px">
-<a class="pu-btn" href="#llegar" style="--bg: #14321a; --fg: #ffffff; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; flex-shrink: 0; background: #14321a; color: #ffffff; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Cómo llegar al stand
+<a class="pu-btn" href="#llegar" style="--bg: #ffffff; --fg: #62b453; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; flex-shrink: 0; background: #ffffff; color: #62b453; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Cómo llegar al stand
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </div>
@@ -59,16 +60,16 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 
 <section aria-label="Datos del evento" style="padding: 64px 24px 24px">
 <div class="pu-datos" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px">
-<div style="border-radius: 12px 32px 12px 32px; padding: 24px; display: flex; gap: 16px; align-items: center; background-color: #3aa536">
+<div style="border-radius: 12px 32px 12px 32px; padding: 24px; display: flex; gap: 16px; align-items: center; background-color: #62b453">
 <div><p style="margin: 0; font-size: 13px; color: #ffffff">Fecha · Date</p><p style="margin: 2px 0 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 20px; color: #ffffff">12 al 26 de septiembre</p></div>
 </div>
-<div style="border-radius: 12px 32px 12px 32px; padding: 24px; display: flex; gap: 16px; align-items: center; background-color: #3aa536">
+<div style="border-radius: 12px 32px 12px 32px; padding: 24px; display: flex; gap: 16px; align-items: center; background-color: #62b453">
 <div><p style="margin: 0; font-size: 13px; color: #ffffff">Dónde · Where</p><p style="margin: 2px 0 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 20px; color: #ffffff">Fan Fest · Parque de la Independencia</p></div>
 </div>
-<div style="border-radius: 12px 32px 12px 32px; padding: 24px; display: flex; gap: 16px; align-items: center; background-color: #3aa536">
+<div style="border-radius: 12px 32px 12px 32px; padding: 24px; display: flex; gap: 16px; align-items: center; background-color: #62b453">
 <div><p style="margin: 0; font-size: 13px; color: #ffffff">Horario · Hours</p><p style="margin: 2px 0 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 20px; color: #ffffff">08:00 - 18:00</p></div>
 </div>
-<div style="border-radius: 12px 32px 12px 32px; padding: 24px; display: flex; gap: 16px; align-items: center; background-color: #3aa536">
+<div style="border-radius: 12px 32px 12px 32px; padding: 24px; display: flex; gap: 16px; align-items: center; background-color: #62b453">
 <div><p style="margin: 0; font-size: 13px; color: #ffffff">Entrada · Entry</p><p style="margin: 2px 0 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 20px; color: #ffffff">Libre y gratuita</p></div>
 </div>
 </div>
@@ -82,18 +83,18 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 </div>
 <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
 <h2 style="margin: 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05">Un pedacito del parque en el medio de los Juegos</h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #36553a">En 9 m² te llevamos de paseo por el Parque Urquiza: jugás, descubrís sus rincones y te vas con todo listo para visitarlo.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #3d3d3d">En 9 m² te llevamos de paseo por el Parque Urquiza: jugás, descubrís sus rincones y te vas con todo listo para visitarlo.</p>
 </div>
 </div>
 </div>
 </section>
 
-<div id="juego" style="background: #fbbb53; padding: 64px 56px 48px; margin: 0 16px; border-radius: 24px 170px 0 0">
+<div id="juego" style="background: #62b453; color: #ffffff; padding: 64px 56px 48px; margin: 0 16px; border-radius: 24px 170px 0 0">
 <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
 <div style="flex: 1 1 380px; max-width: 460px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
-<h3 style="margin: 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: clamp(34px, 4vw, 48px); line-height: 1.05; color: #14321a">Explorador Urquiza</h3>
+<h3 style="margin: 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: clamp(34px, 4vw, 48px); line-height: 1.05; color: #ffffff">Explorador Urquiza</h3>
 <p style="margin: 0; font-size: 18px; line-height: 1.6; max-width: 560px">Superá tres desafíos rápidos sobre el parque. Al terminar ganás tu medalla digital de Explorador Urquiza, tu recorrido recomendado y un QR para hacerlo.</p>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 4px"><a class="pu-btn" href="https://joaquineitor77.github.io/explorador-urquiza/" target="_blank" rel="noopener noreferrer" style="--bg: #fbbb53; --fg: #ffffff; display: inline-flex; align-items: center; gap: 10px; background: #14321a; color: #ffffff; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Jugá ahora</a></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 4px"><a class="pu-btn" href="https://joaquineitor77.github.io/explorador-urquiza/" target="_blank" rel="noopener noreferrer" style="--bg: #ffffff; --fg: #fbbb53; display: inline-flex; align-items: center; gap: 10px; background: #ffffff; color: #62b453; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Jugá ahora</a></div>
 </div>
 <div style="flex: 1 1 480px; min-width: 0; display: flex; justify-content: center">
 <img src="img/explorador.jpg" alt="Pantalla de inicio del juego Explorador Urquiza" style="width: 100%; height: auto; aspect-ratio: 1888 / 1240; display: block; border-radius: 12px 32px 12px 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25)">
@@ -101,11 +102,11 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 </div>
 </div>
 
-<section id="deporte" style="background: #14321a; color: #ffffff; padding: 88px 56px; margin: 0 16px; border-radius: 0 0 24px 170px">
+<section id="deporte" style="background: #2cbcef; color: #ffffff; padding: 88px 56px; margin: 0 16px; border-radius: 0 0 24px 170px">
 <div style="max-width: 1120px; margin: 0 auto; display: flex; gap: 40px; align-items: center; flex-wrap: wrap">
 <div style="flex: 1 1 380px; max-width: 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
 <h2 style="margin: 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05; color: #ffffff">Urquiza también es deporte</h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #e3efe0">En el parque se tira al aro, se juega a las bochas y se corre mirando el río. Por eso, en los Suramericanos, Parque Urquiza no podía faltar.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #ffffff">En el parque se tira al aro, se juega a las bochas y se corre mirando el río. Por eso, en los Suramericanos, Parque Urquiza no podía faltar.</p>
 </div>
 <div style="flex: 1 1 480px; min-width: 0">
 <img src="img/deporte.jpg" alt="Cancha de básquet del Parque Urquiza" style="width: 100%; height: 340px; object-fit: cover; object-position: center; display: block; border-radius: 12px 32px 12px 32px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25)">
@@ -120,9 +121,9 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 </div>
 <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
 <h2 style="margin: 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: clamp(36px, 4.5vw, 52px); line-height: 1.05; max-width: 395px">Encontranos en el Fan Fest</h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #36553a">Parque de la Independencia, Rosario. Bv. Oroño entre Cochabamba y 27 de Febrero, a la altura de Dante Alighieri.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #3d3d3d">Parque de la Independencia, Rosario. Bv. Oroño entre Cochabamba y 27 de Febrero, a la altura de Dante Alighieri.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a class="pu-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Bv.+Oro%C3%B1o+y+Dante+Alighieri,+Rosario" target="_blank" rel="noopener noreferrer" style="--bg: #14321a; --fg: #ffffff; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; background: #14321a; color: #ffffff; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Abrir en Maps</a>
+<a class="pu-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Bv.+Oro%C3%B1o+y+Dante+Alighieri,+Rosario" target="_blank" rel="noopener noreferrer" style="--bg: #62b453; --fg: #ffffff; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; background: #62b453; color: #ffffff; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Abrir en Maps</a>
 </div>
 </div>
 </div>
@@ -132,16 +133,16 @@ nav[aria-label="Principal"] > a:hover{background-size:100% 2px}
 <div style="background: #62b453; padding: 72px 24px 40px">
 <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px">
-<h2 style="margin: 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: clamp(40px, 5vw, 68px); line-height: 1; color: #14321a; max-width: 680px">¿Te sumás a jugar?</h2>
+<h2 style="margin: 0; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: clamp(40px, 5vw, 68px); line-height: 1; color: #ffffff; max-width: 680px">¿Te sumás a jugar?</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 14px">
-<a href="https://www.instagram.com/suramericanos2026/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background: #14321a; color: #ffffff; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Seguinos en redes sociales</a>
-<a href="https://www.google.com/maps/search/?api=1&amp;query=Bv.+Oro%C3%B1o+y+Dante+Alighieri,+Rosario" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background: #ffffff; color: #14321a; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Cómo llegar</a>
+<a href="https://www.instagram.com/suramericanos2026/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background: #2cbcef; color: #ffffff; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Seguinos en redes sociales</a>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Bv.+Oro%C3%B1o+y+Dante+Alighieri,+Rosario" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; background: #ffffff; color: #62b453; text-decoration: none; font-family: 'elza-round-variable', Nunito, sans-serif; font-weight: 700; font-size: 18px; padding: 16px 28px; border-radius: 999px">Cómo llegar</a>
 </div>
 </div>
-<footer style="border-top: 2px solid #14321a; padding-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+<footer style="border-top: 2px solid #ffffff; padding-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
 <img src="img/logo-blanco.png" alt="Parque Urquiza" style="height: 56px; width: auto; display: block">
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; font-size: 15px; font-weight: 500">
-<a href="https://www.instagram.com/suramericanos2026/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="#3aa536" stroke="#ffffff" stroke-width="2"></rect><circle cx="12" cy="12" r="4" stroke="#ffffff" stroke-width="2"></circle><circle cx="17" cy="7" r="0.8" stroke="#ffffff" stroke-width="1.5"></circle></svg><span style="color: #ffffff">@parqueurquiza</span></a>
+<a href="https://www.instagram.com/suramericanos2026/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="#62b453" stroke="#ffffff" stroke-width="2"></rect><circle cx="12" cy="12" r="4" stroke="#ffffff" stroke-width="2"></circle><circle cx="17" cy="7" r="0.8" stroke="#ffffff" stroke-width="1.5"></circle></svg><span style="color: #ffffff">@parqueurquiza</span></a>
 <span style="color: #ffffff">Juegos Suramericanos Santa Fe 2026</span>
 </div>
 </footer>
